@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import { AboutPage } from 'pages/AboutPage';
-import { MainPage } from 'pages/MainPage';
 import { Suspense } from 'react';
 import { routeConfig } from 'shared/config/routerConfig/routeConfig';
+import { PageLoader } from 'shared/ui/PageLoader/PageLoader';
 
 const AppRouter = () => (
-  <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<PageLoader />}>
     <Routes>
       {
         Object.values(routeConfig).map(({ path, element }) => (
@@ -14,9 +13,9 @@ const AppRouter = () => (
             path={path}
             element={(
               <div className="page-wrapper">
-                {' '}
+                { ' ' }
                 { element }
-                {' '}
+                { ' ' }
               </div>
             )}
           />
