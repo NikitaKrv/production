@@ -39,6 +39,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
+    'no-mixed-spaces-and-tabs': 0,
     'i18next/no-literal-string': ['error',
       {
         markupOnly: true,
